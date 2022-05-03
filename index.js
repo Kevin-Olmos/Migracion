@@ -2,6 +2,12 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const routerTaqueria=require('./routes/taquerias.router');
+app.use(express.json());
+app.use(
+  express.urlencoded({
+    extended:true,
+  })
+);
 
 app.get('/', (req, res) => {
     res.send('Hola mi server en express :)');
@@ -12,3 +18,4 @@ app.listen(port, () => {
 });
 
 app.use('/api/v1/taquerias',routerTaqueria);
+

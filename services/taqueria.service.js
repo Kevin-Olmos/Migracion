@@ -45,7 +45,7 @@ class TaqueriasService {
   comentario=' ${changes.comentario}',
   latitud=${changes.latitud},
   longitud=${changes.longitud},
-  pagina_fb='${changes.pagina_fb}
+  pagina_fb='${changes.pagina_fb}'
   WHERE id_taqueria = ${id}`);
     let message = 'Error en actualizar la taqueria';
     if (result.affectedRows) {
